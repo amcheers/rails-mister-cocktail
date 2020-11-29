@@ -17,6 +17,10 @@
   <div class="show-links-container">
     <%= link_to 'All Cocktails', cocktails_path, class: 'btn btn-outline-danger' %>
     <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail), class: 'btn btn-outline-danger' %>
+    <%= link_to cocktail_path(@cocktail), class: 'btn btn-outline-danger', method: :delete, data: { confirm: "Are you sure?"} do %>
+      <i class="fas fa-trash"></i>
+    <% end %>
+    
   </div>
 </div>
 
