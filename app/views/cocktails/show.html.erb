@@ -1,4 +1,5 @@
-<h1><%= @cocktail.name %></h1>
+<div class="main-show-container">
+  <h1><%= @cocktail.name %></h1>
 
   <% @cocktail.doses.each do |dose| %>
   
@@ -7,11 +8,10 @@
   
   <% end %>
   
-<div class="main-show-container">
     <% if @cocktail.photo.attached? %>
       <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
     <% else %>
-      <img src='https://source.unsplash.com/800x450/?<%= @cocktail.name %>' alt="Cocktail name">
+      <img src='https://source.unsplash.com/300x400/?<%= @cocktail.name %>' alt="Cocktail name">
     <% end %>
   
   <div class="show-links-container">
